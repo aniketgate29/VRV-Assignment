@@ -1,0 +1,20 @@
+<h2 mat-dialog-title>{{ data ? 'Edit Role' : 'Add Role' }}</h2>
+<mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Role Name</mat-label>
+    <input matInput [(ngModel)]="role.name" required />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Description</mat-label>
+    <input matInput [(ngModel)]="role.description" required />
+  </mat-form-field>
+
+  <mat-checkbox [(ngModel)]="role.permissions" [value]="'canAddUser'">Add User</mat-checkbox>
+  <mat-checkbox [(ngModel)]="role.permissions" [value]="'canEditUser'">Edit User</mat-checkbox>
+  <mat-checkbox [(ngModel)]="role.permissions" [value]="'canDeleteUser'">Delete User</mat-checkbox>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button (click)="cancel()">Cancel</button>
+  <button mat-button color="primary" (click)="saveRole()">Save</button>
+</mat-dialog-actions>
