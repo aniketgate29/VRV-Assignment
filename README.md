@@ -1,27 +1,89 @@
-# Rbac
+This repository contains the frontend implementation of the Role-Based Access Control (RBAC) Dashboard, built using Angular. The dashboard allows administrators to manage users, roles, and permissions dynamically with an intuitive and responsive interface.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
+##Features
 
-## Development server
+#User Management:
+Add, edit, delete, and view users.
+Assign roles and manage user status (Active/Inactive).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+#Role Management:
+Define and update roles.
+Assign permissions dynamically to roles.
 
-## Code scaffolding
+#Dynamic Permissions:
+Modify and display permissions for roles.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#Responsive Design:
+Optimized for both desktop and mobile devices.
 
-## Build
+#Integration Ready:
+Pre-configured to work with RESTful APIs for backend communication.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+##Technologies Used
+Framework: Angular 15+
+Styling: CSS
+Forms: Angular Template-Driven Forms
+Data Handling: Angular Services and RxJS
+Module System: Angular Modules
+Setup Instructions
+Prerequisites
+Ensure you have the following installed:
 
-## Running unit tests
+Node.js: Version 16 or higher
+Angular CLI: Version 15 or higher
+Git: Version Control System
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+##Installation
 
-## Running end-to-end tests
+'''bash
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+git clone https://github.com/your-username/rbac-dashboard-frontend.git
+cd rbac-dashboard-frontend
+Install project dependencies:
+'''
 
-## Further help
+'''bash
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+npm install
+Start the development server:
+'''
+
+'''bash
+
+ng serve -o
+The application will run at http://localhost:4200.
+'''
+
+'''bash
+
+src/
+├── app/
+│   ├── shared/                # Shared services (e.g., API service)
+│   │   └── api.service.ts     # API service for handling HTTP requests
+│   ├── users/                 # User management components
+│   │   ├── user-form/         # User creation and editing form
+│   │   └── user-list/         # User list and management UI
+│   ├── roles/                 # Role management components
+│   └── app.module.ts          # Main application module
+├── assets/                    # Static assets
+├── environments/              # Environment-specific settings
+├── index.html                 # Application entry point
+└── styles.css                 # Global styles
+'''
+
+
+##Usage
+Navigate to the RBAC Dashboard after starting the application.
+Use the User Management section to manage users (add, edit, delete).
+Use the Role Management section to define roles and manage permissions.
+
+##Future Enhancements
+Add search and filtering options for users and roles.
+
+##Contributions
+Fork the repository.
+Create a feature branch.
+Submit a pull request.
+
+License
+[This project is licensed under the MIT License. See the LICENSE file for details.]
